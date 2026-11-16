@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment secrets
+.env
+.env.*
+
+# Local AWS / config
+config.json
+
+# Generated outputs
+*.csv
+s3_inventory_*.csv
+results/
+out/
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
