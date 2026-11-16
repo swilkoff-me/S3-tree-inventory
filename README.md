@@ -63,6 +63,8 @@ Example contents:
 ```
 
 > Keep real AWS/account values in your local `config.json` and do not commit it to GitHub.
+>
+> Real Athena export CSVs should be saved under the `exports/` folder, never in the repo root. The default output file is timestamped automatically, for example: `exports/s3_inventory_my-bucket_20261116-155000.csv`.
 
 ## Usage
 
@@ -85,9 +87,10 @@ python tree_structure.py \
   --config config.json \
   --database your_athena_database \
   --table s3_inventory_table \
-  --bucket my-bucket \
-  --output s3_inventory_my_bucket.csv
+  --bucket my-bucket
 ```
+
+This writes a timestamped CSV to the `exports/` folder by default. If you want a custom path, you can still override it with `--output`.
 
 Query a specific inventory snapshot:
 

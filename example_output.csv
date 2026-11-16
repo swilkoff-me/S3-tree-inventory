@@ -1,0 +1,7 @@
+Bucket,Level 1,Level 2,Level 3,Object Count,Folder Size (recursive),Oldest Object,Latest Object,Sample File (max 5 rows),Sample File Size
+example-bucket,images,2026,01,3,"1.50 KB","2026-01-10","2026-01-15","images/2026/01/photo-1.jpg","512 B"
+example-bucket,images,2026,01,,"1.50 KB","2026-01-10","2026-01-15","images/2026/01/photo-2.jpg","512 B"
+example-bucket,images,2026,01,,"1.50 KB","2026-01-10","2026-01-15","images/2026/01/photo-3.jpg","512 B"
+example-bucket,documents,2026,02,2,"800 B","2026-02-01","2026-02-05","documents/2026/02/notes.txt","400 B"
+example-bucket,documents,2026,02,,"800 B","2026-02-01","2026-02-05","documents/2026/02/report.pdf","400 B"
+example-bucket,logs,2026,03,1,"256 B","2026-03-02","2026-03-02","logs/2026/03/app.log","256 B"

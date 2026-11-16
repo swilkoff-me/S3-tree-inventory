@@ -17,11 +17,10 @@ env/
 # Local AWS / config
 config.json
 
-# Generated outputs
-*.csv
-s3_inventory_*.csv
-results/
-out/
+# Generated exports 
+exports/*.csv
+exports/*.CSV
+!exports/.gitkeep
 
 # Logs
 *.log

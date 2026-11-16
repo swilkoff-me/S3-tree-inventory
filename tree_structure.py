@@ -502,6 +502,9 @@ def generate_csv(prefix_map, max_depth):
         raise ValueError("Output filename must use the .csv extension.")
 
     output_file = f"{base_name}{extension}"
+    output_dir = os.path.dirname(output_file)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
 
     with open(output_file, "w", encoding="utf-8-sig", newline="") as output_stream:
         writer = csv.writer(output_stream)
@@ -741,7 +744,13 @@ if __name__ == "__main__":
     # Set global variables from arguments
     TARGET_BUCKET = args.bucket
     TABLE = args.table
-    OUTPUT_CSV = args.output or f"s3_inventory_{TARGET_BUCKET}.csv"
+
+    if args.output:
+        OUTPUT_CSV = args.output
+    else:
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        OUTPUT_CSV = os.path.join("exports", f"s3_inventory_{TARGET_BUCKET}_{timestamp}.csv")
+
     DATE_FILTER = args.date
     print(f"Configuration:")
     print(f"  Bucket: {TARGET_BUCKET}")
